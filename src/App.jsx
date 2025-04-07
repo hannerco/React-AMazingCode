@@ -4,19 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Menu from './components/Menu'
 
+const primerCirculo = ["Nela", "Levette"]
+
 function App() {
   const condition = true;
 
   return (
     <>
 
-      <h1>Renderizado condicional con &&</h1>
-      {condition && <h3>Si ves esto, la condición fue True</h3> }
+      <h1>Renderizado de listas</h1>
       
-
-
-      <h1>Renderizado condicional con Operador ternario 'condition ? (ifTrue) : (ifFalse)'</h1>
-      {condition ? (<h3>Condición se cumple</h3>) : (<h3>Condición NO se cumple</h3>)}
+      {primerCirculo.map((friend) => {
+        return ( 
+          <p>{friend}</p>
+        )
+      })}
       
 
       
