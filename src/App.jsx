@@ -13,10 +13,10 @@ function App() {
     <>
 
       <h1>Renderizado de listas</h1>
-      
+
       {primerCirculo.map((friend) => {
         return ( 
-          <p>{friend}</p>
+          <p key={friend}>{friend}</p>
         )
       })}
       
