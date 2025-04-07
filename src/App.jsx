@@ -6,6 +6,12 @@ import Menu from './components/Menu'
 
 const primerCirculo = ["Nela", "Levette"]
 
+const HTMLFriends = primerCirculo.map((friend) => {
+  return ( 
+    <p key={friend}>{friend}</p>
+  )
+})
+
 function App() {
   const condition = true;
 
@@ -14,11 +20,7 @@ function App() {
 
       <h1>Renderizado de listas</h1>
 
-      {primerCirculo.map((friend) => {
-        return ( 
-          <p key={friend}>{friend}</p>
-        )
-      })}
+      {HTMLFriends}
       
 
       
