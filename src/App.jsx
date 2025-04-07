@@ -1,8 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Menu from './components/Menu'
+import Friends from './components/Friends'
 
 const primerCirculo = [
   {
@@ -22,13 +19,7 @@ const primerCirculo = [
 
 const HTMLFriends = primerCirculo.map((friend) => {
   return ( 
-    // Es importante que cada elemento tenga una key que lo identifique
-    <div key={id}> 
-
-      <h2>Nombre: {friend.name}</h2>
-      <p>Edad: {friend.age}</p>
-      <p>Apodo: {friend.nickName}</p>
-    </div>
+    <Friends profile={friend} />
   )
 })
 
