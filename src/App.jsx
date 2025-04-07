@@ -6,9 +6,9 @@ import Menu from './components/Menu'
 
 const primerCirculo = ["Nela", "Levette"]
 
-const HTMLFriends = primerCirculo.map((friend) => {
+const HTMLFriends = primerCirculo.map((friend, index) => {
   return ( 
-    <p key={friend}>{friend}</p>
+    <p key={friend}>{index} | {friend}</p>
   )
 })
 
