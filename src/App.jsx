@@ -5,12 +5,18 @@ import './App.css'
 import Menu from './components/Menu'
 
 function App() {
-  const sayOtherThing = ()=> console.log('Say other thing')
+  const [number, setNumber] = useState(0);
+
+  const addOne = () => {
+    setNumber(number + 1)
+    console.log(number)
+  }
+
+
   return (
     <>
       <Menu></Menu>
-      <h1 onClick={()=> {console.log('Say Something')}}>Hello world</h1>
-      <h2 onClick={sayOtherThing}>My name is Hanner   </h2>
+      <h2 onClick={addOne}>Number = {number}</h2>
     </>
   )
 }
