@@ -5,17 +5,21 @@ import './App.css'
 import Menu from './components/Menu'
 
 function App() {
-  const [text, setText] = useState("Reescribe este texto")
-
-  const handleInput = (e) => {
-    setText(e.target.value)
-  }
+  const condition = true;
 
   return (
     <>
-      <Menu></Menu>
-      <h2>{text || 'Reescribe este texto'}</h2>
-      <input type="text" placeholder='Escribe aquí'  onChange={handleInput}/>
+
+      <h1>Renderizado condicional con &&</h1>
+      {condition && <h3>Si ves esto, la condición fue True</h3> }
+      
+
+
+      <h1>Renderizado condicional con Operador ternario 'condition ? (ifTrue) : (ifFalse)'</h1>
+      {condition ? (<h3>Condición se cumple</h3>) : (<h3>Condición NO se cumple</h3>)}
+      
+
+      
     </>
   )
 }
