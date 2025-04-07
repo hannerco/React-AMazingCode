@@ -5,18 +5,17 @@ import './App.css'
 import Menu from './components/Menu'
 
 function App() {
-  const [number, setNumber] = useState(0);
+  const [text, setText] = useState("Reescribe este texto")
 
-  const addOne = () => {
-    setNumber(number + 1)
-    console.log(number)
+  const handleInput = (e) => {
+    setText(e.target.value)
   }
-
 
   return (
     <>
       <Menu></Menu>
-      <h2 onClick={addOne}>Number = {number}</h2>
+      <h2>{text || 'Reescribe este texto'}</h2>
+      <input type="text" placeholder='Escribe aquí'  onChange={handleInput}/>
     </>
   )
 }
