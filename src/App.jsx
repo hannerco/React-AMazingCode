@@ -1,39 +1,18 @@
 import './App.css'
-import Friends from './components/Friends'
-
-const primerCirculo = [
-  {
-    id: 1,
-    name: 'Lourdes Valentina Levette Ipuana',
-    age: 23,
-    nickName: 'Levi',
-  },
-
-  {
-    id: 2,
-    name: 'Lauren Daniela Cruz Ladino',
-    age: 20,
-    nickName: 'Nela',
-  }
-]
-
-const HTMLFriends = primerCirculo.map((friend) => {
-  return ( 
-    <Friends profile={friend} />
-  )
-})
+import React, { use, useState } from 'react'
+import Welcome from './components/Welcome'
 
 function App() {
+    const [displayWelcome, setDisplayWelcome] = useState("")
+
+  const getName = (name) => {
+    setDisplayWelcome("Desde el padre: Bienvenido " + name)
+  }
 
   return (
-    <>
-
-      <h1>Renderizado de listas</h1>
-
-      {HTMLFriends}
-      
-
-      
+    <> 
+    <h1>{displayWelcome}</h1>
+    <Welcome  handleChild={getName}> </Welcome>
     </>
   )
 }
