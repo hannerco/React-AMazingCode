@@ -1,25 +1,23 @@
 import {useState} from 'react';
 import Child from './components/Child';
-import HelloUser from './components/HelloUser';
 
 function App(){
-  const [displayName, setDisplayname] = useState("");
+  const [condition, setCondition] = useState(false);
 
-  const login = (name) => {
-    setDisplayname(name);
+
+  const handleClick = () => {
+    setCondition(!condition);
   }
 
-  return (
-    <div>
-      <h1>State Up | Comunicación entre hermanos</h1>
+  return(
+    <>
+    <button onClick={handleClick}>Cambiar estado</button>
+    {condition && <Child></Child>}
+    
+    </>
+  )
 
-      <h2>Hola {displayName}</h2>
 
-      <HelloUser username={displayName}></HelloUser>
-
-      <Child handleLogin={login} username={displayName}> </Child>
-    </div>
-  );
 }
 
 
