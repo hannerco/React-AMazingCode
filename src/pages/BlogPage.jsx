@@ -1,8 +1,12 @@
 import React from 'react'
+import HeaderComponent from '../components/HeaderComponent'
 
 const BlogPage = () => {
   return (
-    <div>BlogPage</div>
+    <>
+      <HeaderComponent></HeaderComponent>
+      <div>BlogPage</div>
+    </>
   )
 }
 

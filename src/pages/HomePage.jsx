@@ -1,8 +1,12 @@
 import React from 'react'
+import HeaderComponent from '../components/HeaderComponent'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <>
+      <HeaderComponent></HeaderComponent>
+      <div>HomePage</div>
+    </>
   )
 }
 
