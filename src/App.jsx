@@ -5,6 +5,7 @@ import Formulario from './components/Formulario'
 import FormularioPropio from './components/FormularioPropio'
 import HomePage from './pages/HomePage'
 import BlogPage from './pages/BlogPage'
+import PostDetails from './pages/PostDetails'
 
 
 const App = () => {
@@ -14,6 +15,8 @@ const App = () => {
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/blog' element={<BlogPage/>}/>
+      <Route path='/blog/:id' element={<PostDetails/>}/>
+    
       
     </Routes>
   )
