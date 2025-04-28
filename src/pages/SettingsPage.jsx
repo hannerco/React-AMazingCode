@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import HeaderComponent from '../components/HeaderComponent'
 import { useState } from 'react';
 import { Navigate } from "react-router-dom"
+import { UserContext } from '../contexts/user.context';
 
 const SettingsPage = () => {
-    const [hasAcces, setAcess] = useState(false);
-
-    if (!hasAcces) return <Navigate to={"/error"}/>
+    const {user} = useContext(UserContext)
+    
+    if (!user?.isAdmin) return <Navigate to={"/error"}/>
     return (
         <>
             <HeaderComponent></HeaderComponent>
